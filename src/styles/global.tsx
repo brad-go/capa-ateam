@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { COLORS } from '~constants/styles';
+import { COLORS, FONTS } from '~constants/styles';
 
 const GlobalStyle = createGlobalStyle`
 html,
@@ -120,6 +120,8 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
   color: ${COLORS.GRAY.DEFAULT};
   font-size: 14px;
+  font-weight: ${FONTS.MEDIUM};
+  line-height: 20px;
   background-color: ${COLORS.WHITE};
 }
 
