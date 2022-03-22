@@ -30,7 +30,8 @@ module.exports = {
   rules: {
     'no-console': 0,
     'no-unsued-vars': 0,
-    'no-use-before-define': 1,
+    '@typescript-eslint/no-unused-vars': 0,
+    'no-use-before-define': 0,
     'react-hooks/exhaustive-deps': 1,
     'react/jsx-props-no-spreading': 0,
     'react/jsx-filename-extension': 0,
