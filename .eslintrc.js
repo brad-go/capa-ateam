@@ -5,7 +5,7 @@ module.exports = {
   },
   settings: {
     'import/resolver': {
-      typescript: './tsconfig.json',
+      typescript: {},
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
@@ -43,6 +43,7 @@ module.exports = {
       },
     ],
     'import/extensions': 0,
+    'import/no-extraneous-dependencies': 0,
   },
   overrides: [
     {
