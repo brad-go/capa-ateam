@@ -21,13 +21,14 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "node json-server/index.js",
+    "start": "concurrently \"yarn start:dev\" \"yarn json\"",
     "start:dev": "craco start",
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "json": "json-server --watch server/db.json --port 3001"
   },
   "eslintConfig": {
     "extends": [
@@ -71,6 +72,7 @@
     "@types/styled-components": "^5.1.24",
     "@typescript-eslint/eslint-plugin": "^5.16.0",
     "@typescript-eslint/parser": "^5.16.0",
+    "concurrently": "^7.0.0",
     "eslint": "^8.11.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
