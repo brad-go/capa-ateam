@@ -56,10 +56,10 @@ const StyledBox = styled.div<{ checked: boolean }>`
   height: 18px;
   box-sizing: border-box;
   border: 2px solid
-    ${({ checked }) => (checked ? 'transparent' : COLORS.GRAY.SUB)};
+    ${({ checked }) => (checked ? 'transparent' : COLORS.GRAY[600])};
   border-radius: 2px;
   background-color: ${({ checked }) =>
-    checked ? COLORS.PRIMARY.ACCENT : COLORS.WHITE};
+    checked ? COLORS.PRIMARY[500] : COLORS.WHITE};
   transition: all 0.2s;
   cursor: pointer;
 `;

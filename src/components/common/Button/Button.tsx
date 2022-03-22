@@ -29,12 +29,11 @@ const Base = styled.button<{ contained: boolean }>`
   justify-content: center;
   align-items: center;
   padding: 6px 12px;
-  border: 1px solid ${COLORS.PRIMARY.ACCENT};
+  border: 1px solid ${COLORS.PRIMARY[500]};
   border-radius: 4px;
   background-color: ${({ contained }) =>
-    contained ? COLORS.PRIMARY.ACCENT : COLORS.WHITE};
-  color: ${({ contained }) =>
-    contained ? COLORS.WHITE : COLORS.PRIMARY.ACCENT};
+    contained ? COLORS.PRIMARY[500] : COLORS.WHITE};
+  color: ${({ contained }) => (contained ? COLORS.WHITE : COLORS.PRIMARY[500])};
   font-weight: ${FONTS.MEDIUM};
   line-height: 20px;
 

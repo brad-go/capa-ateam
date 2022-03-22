@@ -118,7 +118,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Noto Sans KR', sans-serif;
-  color: ${COLORS.GRAY.DEFAULT};
+  color: ${COLORS.GRAY[900]};
   font-size: 14px;
   font-weight: ${FONTS.MEDIUM};
   line-height: 20px;
