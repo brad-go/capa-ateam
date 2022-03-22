@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 export const COLORS = {
   PRIMARY: {
     DEFAULT: '#1565C0',
@@ -5,7 +6,6 @@ export const COLORS = {
   },
   WARNING: '#FFA000',
   GRAY: {
-    WHITE_DEFAULT: '#FFFFFF',
     DEFAULT: '#323D45',
     SUB: '#939FA5',
   },
@@ -14,4 +14,11 @@ export const COLORS = {
     LIGHT: '#F5F5F5',
     DARK: '#C2C2C2',
   },
+  WHITE: '#FFFFFF',
+};
+
+export const FONTS = {
+  REGULAR: 400,
+  MEDIUM: 500,
+  BOLD: 700,
 };
