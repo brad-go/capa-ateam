@@ -6,13 +6,13 @@ import { COLORS, FONTS } from '~constants/styles';
 interface Props {
   children: React.ReactChild;
   type?: 'button' | 'submit' | 'reset';
-  contained?: boolean;
-  onClick?: React.MouseEventHandler;
+  contained: boolean;
+  onClick: React.MouseEventHandler;
 }
 
 const Button = ({ children, type, contained, onClick, ...rest }: Props) => {
   return (
-    <Base type={type} contained={contained!} onClick={onClick} {...rest}>
+    <Base type={type} contained={contained} onClick={onClick} {...rest}>
       {children}
     </Base>
   );
@@ -20,8 +20,6 @@ const Button = ({ children, type, contained, onClick, ...rest }: Props) => {
 
 Button.defaultProps = {
   type: 'button',
-  contained: false,
-  onClick: null,
 };
 
 const Base = styled.button<{ contained: boolean }>`

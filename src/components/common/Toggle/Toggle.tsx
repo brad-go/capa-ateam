@@ -1,5 +1,3 @@
-/* eslint-disable react/default-props-match-prop-types */
-/* eslint-disable react/require-default-props */
 import React from 'react';
 import styled from 'styled-components';
 import { COLORS } from '~constants/styles';
@@ -16,11 +14,6 @@ const Toggle = ({ active, onChange }: Props) => {
       <Knob active={active} />
     </Track>
   );
-};
-
-Toggle.defaultProps = {
-  label: '',
-  active: false,
 };
 
 const Track = styled.label<{ active: boolean }>`

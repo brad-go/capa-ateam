@@ -5,8 +5,8 @@ import { ReactComponent as CheckSVG } from '~assets/svg/check.svg';
 import { COLORS } from '~constants/styles';
 
 interface Props {
-  label?: string;
-  checked?: boolean;
+  label: string;
+  checked: boolean;
   onChange: React.ChangeEventHandler;
 }
 
@@ -14,17 +14,10 @@ const CheckBox = ({ label, checked, onChange }: Props) => {
   return (
     <Label>
       <Box type="checkbox" checked={checked} onChange={onChange} />
-      <StyledBox checked={checked || false}>
-        {checked && <CheckSVG />}
-      </StyledBox>
+      <StyledBox checked={checked}>{checked && <CheckSVG />}</StyledBox>
       {label}
     </Label>
   );
-};
-
-CheckBox.defaultProps = {
-  label: '',
-  checked: false,
 };
 
 const Label = styled.label`
