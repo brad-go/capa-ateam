@@ -1,3 +1,4 @@
+/* eslint-disable no-path-concat */
 /* eslint-disable prefer-template */
 /* eslint-disable @typescript-eslint/no-var-requires */
 const jsonServer = require('json-server');
