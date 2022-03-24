@@ -1,7 +1,8 @@
+/* eslint-disable import/prefer-default-export */
 import React, { useState, useEffect } from 'react';
 import type { APIError, APIReturnType } from '~types/api';
 
-const useFetch = async (url: string) => {
+export const useFetch = async (url: string) => {
   const [payload, setPayload] = useState<APIReturnType[]>();
   const [loading, setLoading] = useState<boolean>(true);
 
