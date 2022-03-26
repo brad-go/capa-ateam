@@ -10,6 +10,8 @@ export type MaterialType =
 
 export type StatusType = '대기중' | '상담중';
 
+export type OptionType = MethodType | MaterialType;
+
 export interface APIError {
   message: string;
 }
