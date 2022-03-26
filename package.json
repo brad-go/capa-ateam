@@ -22,8 +22,8 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "concurrently \"yarn start:dev\" \"yarn json\"",
-    "start:dev": "craco start",
+    "start": "node json-server/index.js",
+    "start:dev": "concurrently \"yarn start:dev\" \"yarn json\"",
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
