@@ -1,5 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
 import GlobalStyle from '~styles/global';
 import theme from '~styles/theme';
 
@@ -18,6 +19,11 @@ export const parameters = {
     matchers: {
       color: /(background|color)$/i,
       date: /Date$/,
+    },
+  },
+  viewport: {
+    viewports: {
+      ...MINIMAL_VIEWPORTS,
     },
   },
 };
