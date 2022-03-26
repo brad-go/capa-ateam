@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import React from 'react';
 import styled from 'styled-components';
-import { APIReturnType } from '~types/api';
 import { Button } from '~components/common';
 import { COLORS, FONTS } from '~constants/styles';
 import { listItemWithComma } from '~utils/format';
+import type { APIReturnType } from '~types/api';
 
 interface Props {
   requestInfo: APIReturnType;
@@ -19,17 +19,21 @@ const RequestCard = ({ requestInfo }: Props) => {
         <h2>{title}</h2>
         <p>{client}</p>
         {status === '상담중' && <Status>상담중</Status>}
-        <p>{due}</p>
+        <p>{due}까지 납기</p>
       </Summary>
       <Detail>
-        <span>도면개수</span>
-        <span>{`${count}개`}</span>
-        <span>총 수량</span>
-        <span>{`${amount}개`}</span>
-        <span>가공방식</span>
-        <span>{listItemWithComma(method)}</span>
-        <span>재료</span>
-        <span>{listItemWithComma(material)}</span>
+        <div>
+          <li>도면개수</li>
+          <li>총 수량</li>
+          <li>가공방식</li>
+          <li>재료</li>
+        </div>
+        <div>
+          <li>{`${count}개`}</li>
+          <li>{`${amount}개`}</li>
+          <li>{listItemWithComma(method)}</li>
+          <li>{listItemWithComma(material)}</li>
+        </div>
       </Detail>
       <Form id="request">
         <Button form="request" type="submit" contained>
@@ -46,11 +50,18 @@ const RequestCard = ({ requestInfo }: Props) => {
 const Card = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
   max-width: 366px;
   min-width: 320px;
   padding: 24px 16px;
   border: 1px solid ${COLORS.BACKGROUND.BASE};
   border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    padding: 23px 15px;
+    border: 2px solid ${COLORS.PRIMARY[500]};
+  }
 
   @media ${({ theme }) => theme.device.mobile} {
     height: 344px;
@@ -65,6 +76,7 @@ const Summary = styled.div`
 
   h2 {
     font-size: 16px;
+    font-weight: ${FONTS.BOLD};
     line-height: 24px;
   }
 
@@ -109,21 +121,20 @@ const Status = styled.span`
   color: ${COLORS.WARNING};
 `;
 
-const Detail = styled.div`
+const Detail = styled.ul`
   display: grid;
   grid-template-columns: 102px 1fr;
-  grid-template-rows: repeat(4, 1fr);
-  row-gap: 8px;
   padding: 32px 0;
 
-  span {
-    display: inline-flex;
+  div {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 8px;
     font-weight: ${FONTS.REGULAR};
+  }
 
-    &:nth-of-type(even) {
-      display: inline-block;
-      font-weight: ${FONTS.BOLD};
-    }
+  div:last-child {
+    font-weight: ${FONTS.BOLD};
   }
 `;
 
