@@ -1,12 +1,13 @@
 /* eslint-disable import/prefer-default-export */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import type { APIError, APIReturnType } from '~types/api';
 
-export const useFetch = async (url: string) => {
+export const useFetch = (url: string) => {
   const [payload, setPayload] = useState<APIReturnType[]>();
-  const [loading, setLoading] = useState<boolean>(true);
+  const [isLoading, setLoading] = useState<boolean>(true);
 
-  const fetchAPI = async () => {
+  const fetchAPI = useCallback(async () => {
+    setLoading(true);
     try {
       const res = await fetch(url);
       if (!res.ok) throw new Error(`서버에 문제가 생겼습니다.`);
@@ -18,11 +19,11 @@ export const useFetch = async (url: string) => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [url]);
 
   useEffect(() => {
     fetchAPI();
-  });
+  }, [fetchAPI, url]);
 
-  return { payload, loading };
+  return { payload, isLoading };
 };
