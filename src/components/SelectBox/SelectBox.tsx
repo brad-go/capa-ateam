@@ -1,11 +1,11 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
-import { MaterialType, MethodType } from '~types/api';
-import { ReactComponent as ArrowDownSVG } from '~assets/svg/arrow_drop_down.svg';
-import { countSelected, isSelected } from '~utils/index';
-import { COLORS, FONTS } from '~constants/styles';
 import { useDrawer } from '~hooks/useDrawer';
 import { CheckBox } from '~components/common';
+import { COLORS } from '~constants/styles';
+import { ReactComponent as ArrowDownSVG } from '~assets/svg/arrow_drop_down.svg';
+import { countSelected, isSelected } from '~utils/index';
+import type { MaterialType, MethodType } from '~types/api';
 
 interface Props {
   title: string;
@@ -68,7 +68,6 @@ const SelectTitle = styled.div<{ selected: boolean }>`
   span {
     display: inline-block;
     padding-bottom: 2px;
-    font-weight: ${FONTS.REGULAR};
   }
 
   &:hover {
@@ -88,6 +87,8 @@ const SelectItem = styled.span`
   padding: 16px 12px;
   border: 1px solid ${COLORS.GRAY[600]};
   border-radius: 4px;
+  background-color: ${COLORS.WHITE};
+  z-index: 10;
 
   &:hover {
     border: 1px solid ${COLORS.PRIMARY[500]};
