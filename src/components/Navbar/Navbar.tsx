@@ -78,6 +78,10 @@ const Nav = styled.nav`
 const Logo = styled.a`
   display: flex;
   align-items: center;
+  img {
+    width: 153px;
+    height: 20px;
+  }
 
   @media ${({ theme }) => theme.device.mobile} {
     display: inline-block;
