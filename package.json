@@ -22,7 +22,7 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "node json-server/index.js",
+    "start": "node server/index.js",
     "start:dev": "concurrently \"yarn start:dev\" \"yarn json\"",
     "build": "craco build",
     "test": "craco test",
