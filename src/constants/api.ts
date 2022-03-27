@@ -3,7 +3,7 @@ import { MaterialType, MethodType } from '~types/api';
 
 const { REACT_APP_API_URL } = process.env;
 
-export const API_URL = `${REACT_APP_API_URL}/requests`;
+export const API_URL = `${REACT_APP_API_URL}requests`;
 
 export const METHODS: MethodType[] = ['밀링', '선반'];
 
