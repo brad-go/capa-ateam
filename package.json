@@ -29,7 +29,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "json": "json-server --watch server/db.json --port 3001"
+    "json": "json-server --watch server/db.json --port 3001",
+    "chromatic": "npx chromatic --project-token=1badd7dd95bf"
   },
   "eslintConfig": {
     "extends": [
@@ -74,6 +75,7 @@
     "@types/uuid": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "^5.16.0",
     "@typescript-eslint/parser": "^5.16.0",
+    "chromatic": "^6.5.3",
     "concurrently": "^7.0.0",
     "eslint": "^8.11.0",
     "eslint-config-airbnb": "^19.0.4",
