@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "node server/index.js",
-    "start:dev": "concurrently \"yarn start:dev\" \"yarn json\"",
+    "start:dev": "concurrently \"craco start\" \"yarn json\"",
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
