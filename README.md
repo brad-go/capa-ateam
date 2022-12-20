@@ -1,10 +1,10 @@
-# [CAPA] Ateam Ventures 기업과제<br />
+# [CAPA] React + Typescript를 활용한 견적 요청 페이지 <br />
 
 <br />
 
-## :speaking_head: 1. 프로젝트 소개 
+## :speaking_head: 1. 프로젝트 소개
 
-> 파트너사에 맞는 요청서를 보여주는 페이지를 구현합니다. 
+> 파트너사에 맞는 요청서를 보여주는 페이지를 구현합니다.
 
 - 개인 프로젝트
 - 제작기간: 2021.03.22 ~ 2021.03.27
@@ -13,12 +13,13 @@
 
 ## :rocket: 2. DEMO LINK
 
-#### 🔗 **과제물**(heroku): https://capa-ateam.herokuapp.com/ <br />
+#### 🔗 **과제물**(cloudtype): https://web-capa-ateam-53px25lbvxq990.gksl2.cloudtype.app/ <br />
+
 #### 🔗 **Storybook**: https://623faebeafe4da003aa986fe-oimyhbkpcc.chromatic.com/
 
 <br />
 
-## :books: 3. 사용된 기술 스택 
+## :books: 3. 사용된 기술 스택
 
 ![](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white) ![](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) ![](https://img.shields.io/badge/Storybook-FF4785?style=for-the-badge&logo=Storybook&logoColor=white)
 
@@ -29,7 +30,7 @@
 
 <br />
 
-## :electric_plug: 4. 프로젝트 실행 방법 
+## :electric_plug: 4. 프로젝트 실행 방법
 
 1. git clone하여 프로젝트를 내려받습니다.
    ```bash
@@ -47,11 +48,10 @@
    ```bash
    yarn start:dev
    ```
-   
+
 <br />
 
 ## :gear: 5. 구현사항
-
 
 ### 요구사항
 
